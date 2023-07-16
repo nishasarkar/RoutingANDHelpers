@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>What is ASP.NET Core?</h1>
+<p>It is an open source....</p>
+
+
+<h4>Comments</h4>
+@await Component.InvokeAsync("Comments",new{ id=2 })
+

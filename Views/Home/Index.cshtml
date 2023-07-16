@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string name = "Mohan";
+
+    void Show(string[] arr)
+    {
+        <ul>
+            @foreach (var item in arr)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    }
+}
+
+<div>
+    My name: @name
+</div>
+
+@for (int i = 1; i <= 10; i++)
+{
+    if (i % 2 == 0)
+    {
+        int j = i + 1;
+        <div>Even Number: @i</div>
+    }
+    else
+    {
+        <div>Odd Number: @i</div>
+    }
+}
+
+<h3>Most Popular Course</h3>
+@{
+    Show(new string[] { "Data Science", "DSA", "Cloud" });
+}
+
+<h3>.NET Course</h3>
+@{
+    Show(new string[] { "ASP.NET Core", "Microservices", "Azure" });
+}
